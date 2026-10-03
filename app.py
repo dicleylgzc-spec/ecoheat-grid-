@@ -1,4 +1,4 @@
-# EcoHeat Grid - Orman Şefliği Karar Destek Paneli (SİMÜLASYON) | tek dosya: app.py
+# AnkaGrid - Orman Şefliği Karar Destek Paneli (SİMÜLASYON) | tek dosya: app.py
 # Yerelde:  python app.py   (eksik kütüphaneler otomatik kurulur ve uygulama açılır)
 # Bulutta:  requirements.txt kullanılır (bu blok orada zaten atlanır)
 import importlib.util, subprocess, sys, os
@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="EcoHeat Grid", page_icon="🌲", layout="wide")
+st.set_page_config(page_title="AnkaGrid", page_icon="🌲", layout="wide")
 
 # ===================== 1) AĞAÇ PROFİLİ (DİNAMİK) =====================
 @dataclass(frozen=True)
@@ -97,7 +97,8 @@ def hav(la1, lo1, la2, lo2):
 clock = lambda m: f"{14 + m // 60:02d}:{m % 60:02d}"
 
 # ===================== 4) ARAYÜZ =====================
-st.title("🌲 EcoHeat Grid – Karar Destek Paneli")
+st.title("🌲 AnkaGrid – Karar Destek Paneli")
+st.markdown("**Ormanın Isı Nabzını Dinleyen Erken Uyarı Ağı**")
 st.caption("Orman Şefliği ekranı • ⚠️ Simülasyon: veriler sentetiktir, eşikler pilot alanda kalibre edilecektir.")
 
 with st.sidebar:
